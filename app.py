@@ -277,6 +277,8 @@ if st.session_state.started and st.session_state.await_next and st.session_state
 
 # ===== 表示（ボタン処理後に再取得して必ず更新） =====
 cur_text = current_text()
+st.subheader("現在の札")
+st.write(f"**{cur_text if cur_text else '（未読の札はありません）'}**")
 
 # 進捗（既読枚数 / 合計）
 read_count = len(st.session_state.read_set)
